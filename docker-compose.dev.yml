@@ -1,0 +1,6 @@
+version: '1'
+
+services:
+  express-server:
+    container_name: express-server-dev
+    command: yarn dev -L

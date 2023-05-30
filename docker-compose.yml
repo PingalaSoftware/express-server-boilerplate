@@ -1,0 +1,32 @@
+version: '1'
+
+services:
+  express-server:
+    build: .
+    image: express-server
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/express-server-boilerplate
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/usr/src/express-server
+    networks:
+      - development-network
+
+  mongodb:
+    image: mongo:4.2.1-bionic
+    ports:
+      - '27017:27017'
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - development-network
+
+volumes:
+  dbdata:
+
+networks:
+  development-network:
+    driver: bridge
