@@ -1,0 +1,12 @@
+node_modules
+coverage
+yarn-error.log
+package-lock.json
+
+.git-backup
+.env
+*.zip
+*.log
+*.txt
+
+!.env*.example

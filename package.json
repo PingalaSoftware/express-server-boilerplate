@@ -1,0 +1,16 @@
+{
+  "name": "express-server-boilerplate",
+  "version": "1.0.0",
+  "description": "Production ready express server for API development",
+  "main": "bin/www.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ajay Kumar",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+  }
+}
