@@ -1,6 +1,0 @@
-version: '1'
-
-services:
-  express-server:
-    container_name: express-server-test
-    command: yarn test
