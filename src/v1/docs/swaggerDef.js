@@ -1,4 +1,4 @@
-const { version } = require('../../package.json');
+const { version } = require('../../../package.json');
 const config = require('../../config/config');
 
 const swaggerDef = {
@@ -13,7 +13,7 @@ const swaggerDef = {
   },
   servers: [
     {
-      url: `http://localhost:${config.port}/${config.apiPath}/v1`,
+      url: `http://localhost:${config.port}${config.apiPath}/v1`,
     },
   ],
 };

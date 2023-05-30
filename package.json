@@ -14,7 +14,7 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
     "prettier:fix": "prettier --write **/*.js",
-    "prepare": "husky install"
+    "prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*"
   },
   "engines": {
     "node": ">=16.0.0"
