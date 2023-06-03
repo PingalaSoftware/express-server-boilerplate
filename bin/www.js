@@ -12,8 +12,8 @@ let server = null;
 
 const exitHandler = () => {
     Promise.all([
-        mongoose.connection.readyState ? mongoose.connection.close() : () => {},
-        server ? server.close() : () => {},
+        mongoose.connection.readyState ? mongoose.connection.close() : () => { },
+        server ? server.close() : () => { },
     ])
         .then(process.exit(0))
         .catch((error) => {
@@ -55,7 +55,7 @@ mongoose
 
         server = http.createServer(app);
 
-        server.listen(port);
+        server.listen(config.port);
         server.on('error', unexpectedErrorHandler);
         server.on('listening', onListening);
     })

@@ -3,6 +3,7 @@ coverage
 yarn-error.log
 package-lock.json
 
+logs
 .git-backup
 .env
 *.zip
