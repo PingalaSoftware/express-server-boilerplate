@@ -5,6 +5,7 @@ package-lock.json
 
 logs
 .git-backup
+.git-*
 .env
 *.zip
 *.log

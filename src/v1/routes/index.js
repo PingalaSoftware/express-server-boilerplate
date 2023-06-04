@@ -2,6 +2,7 @@ const express = require('express');
 const config = require('../../config/config');
 
 const healthRoute = require('./health.route');
+const suAdminRoute = require('./suAdmin.route');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
@@ -27,6 +28,10 @@ const devRoutes = [
   {
     path: '/docs',
     route: docsRoute,
+  },
+  {
+    path: '/su-admin',
+    route: suAdminRoute,
   },
 ];
 
