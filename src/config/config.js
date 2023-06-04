@@ -19,10 +19,8 @@ const envVarsSchema = Joi.object()
     JWT_VERIFY_EMAIL_EXPIRATION_MINUTES: Joi.number()
       .default(10)
       .description('minutes after which verify email token expires'),
-    SMTP_HOST: Joi.string().description('server that will send the emails'),
-    SMTP_PORT: Joi.number().description('port to connect to the email server'),
-    SMTP_USERNAME: Joi.string().description('username for email server'),
-    SMTP_PASSWORD: Joi.string().description('password for email server'),
+    MAIL_CHIMP_API_KEY: Joi.string().required().description('MailChimp API key to send the emails'),
+    MAIL_FRONT_END_LINK: Joi.string().required().description('Frontend url to which token in mail points to'),
     EMAIL_FROM: Joi.string().description('the from field in the emails sent by the app'),
   })
   .unknown();
@@ -58,12 +56,8 @@ module.exports = {
   },
   email: {
     smtp: {
-      host: envVars.SMTP_HOST,
-      port: envVars.SMTP_PORT,
-      auth: {
-        user: envVars.SMTP_USERNAME,
-        pass: envVars.SMTP_PASSWORD,
-      },
+      frontEndLink: envVars.MAIL_FRONT_END_LINK,
+      mailChimpAPIKey: envVars.MAIL_CHIMP_API_KEY,
     },
     from: envVars.EMAIL_FROM,
   },

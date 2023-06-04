@@ -1,15 +1,11 @@
-const { version } = require('../../../package.json');
+const { version, name } = require('../../../package.json');
 const config = require('../../config/config');
 
 const swaggerDef = {
   openapi: '3.0.0',
   info: {
-    title: 'express-server-boilerplate API documentation',
+    title: name,
     version,
-    license: {
-      name: 'MIT',
-      url: 'https://github.com/ajay-arya/express-server-boilerplate',
-    },
   },
   servers: [
     {
